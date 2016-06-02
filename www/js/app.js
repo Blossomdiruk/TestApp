@@ -26,8 +26,8 @@ app.controller('customersCtrl', function($scope, $http) {
     $http.get("http://localhost/cordova/query.php")
 	.success(function (response) {
 		console.log(response);
-		//$scope.names = $sce.trustAsHtml(response.records);
-		$scope.names = response.records;
+		$scope.names = $sce.trustAsHtml(response.records);
+		//$scope.names = response.records;
 		
 		});
 });
